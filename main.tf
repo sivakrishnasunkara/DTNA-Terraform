@@ -1,6 +1,7 @@
 provider "azurerm"{
     version = "2.4.0"
-    subscription_id = "d9cff28b-eba4-4cb6-b562-2d88c545f931"
+    #subscription_id = "d9cff28b-eba4-4cb6-b562-2d88c545f931"
+    subscription_id = "f76f8dfb-4b8e-4837-913f-9c6daf8dd73c"
     tenant_id = "aef6baf5-6231-4690-9308-23d674d56b05"
     client_id = "1d2b3d5c-0c3d-4d99-967e-307e7d714d13"
 
