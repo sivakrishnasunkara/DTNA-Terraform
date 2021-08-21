@@ -132,9 +132,9 @@ resource "azurerm_resource_group" "RG1" {
 #   resource_group_name = azurerm_resource_group.RG1.name
 # }
 
-# creating data factory
-#  resource "azurerm_data_factory" "dtnadatafactory" {
-#    name                = var.dtnadatafactory
-#    location            = azurerm_resource_group.RG1.location
-#    resource_group_name = azurerm_resource_group.RG1.name
-# }
+creating data factory
+ resource "azurerm_data_factory" "dtnadatafactory" {
+   name                = var.dtnadatafactory
+   location            = azurerm_resource_group.RG1.location
+   resource_group_name = azurerm_resource_group.RG1.name
+}
