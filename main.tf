@@ -11,15 +11,15 @@ resource "azurerm_resource_group" "RG1" {
   name     = var.resourceGroup
   location = var.rglocation
 }
- resource "azurerm_virtual_network" "dtnanetwork" {
-   name                = var.network
-   resource_group_name = "${azurerm_resource_group.RG1.name}"
-   location            = "${azurerm_resource_group.RG1.location}"
-   address_space       = var.addrspace
-   subnet {
-   name           = var.subnetone
-   address_prefix = var.subnetoneaddr
-}
+#  resource "azurerm_virtual_network" "dtnanetwork" {
+#    name                = var.network
+#    resource_group_name = "${azurerm_resource_group.RG1.name}"
+#    location            = "${azurerm_resource_group.RG1.location}"
+#    address_space       = var.addrspace
+#    subnet {
+#    name           = var.subnetone
+#    address_prefix = var.subnetoneaddr
+#     }
 
 #    subnet {
 #      name           = var.subnettwo
@@ -30,7 +30,7 @@ resource "azurerm_resource_group" "RG1" {
 #      name           = var.subnetthree
 #      address_prefix = var.subeneththreeaddr
 #    }
-}
+#}
 # resource "azurerm_databricks_workspace" "bricks" {
 #   name                = var.databricks
 #   resource_group_name = azurerm_resource_group.RG1.name
@@ -51,14 +51,14 @@ resource "azurerm_resource_group" "RG1" {
 #   is_hns_enabled           = var.storagehns
 # }
 
- resource "azurerm_storage_data_lake_gen2_filesystem" "dtnahisdata" {
-   name               = "dtnahisdatalake"
-   storage_account_id = azurerm_storage_account.sgacc.id
+#  resource "azurerm_storage_data_lake_gen2_filesystem" "dtnahisdata" {
+#    name               = "dtnahisdatalake"
+#    storage_account_id = azurerm_storage_account.sgacc.id
 
 #   properties = {
 #     hello = "siva12345"
 #   }
- }
+# }
 # resource "azurerm_eventhub_namespace" "ehname" {
 #   name                = "dtnanamespace"
 #   location            = azurerm_resource_group.RG1.location
@@ -124,7 +124,7 @@ resource "azurerm_resource_group" "RG1" {
 #   table_name        = "my-table"         #(Optional)
 #   mapping_rule_name = "my-table-mapping" #(Optional)
 #   data_format       = "JSON"             #(Optional)
-# }
+#}
 
 # resource "azurerm_data_factory" "factory" {
 #   name                = "dtnafactory"
@@ -132,9 +132,3 @@ resource "azurerm_resource_group" "RG1" {
 #   resource_group_name = azurerm_resource_group.RG1.name
 # }
 
-creating data factory
- resource "azurerm_data_factory" "dtnadatafactory" {
-   name                = var.dtnadatafactory
-   location            = azurerm_resource_group.RG1.location
-   resource_group_name = azurerm_resource_group.RG1.name
-}
