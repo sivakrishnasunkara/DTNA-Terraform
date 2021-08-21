@@ -51,9 +51,9 @@ resource "azurerm_resource_group" "RG1" {
 #   is_hns_enabled           = var.storagehns
 # }
 
-# resource "azurerm_storage_data_lake_gen2_filesystem" "dtnahisdata" {
-#   name               = "dtnahisdatalake"
-#   storage_account_id = azurerm_storage_account.sgacc.id
+ resource "azurerm_storage_data_lake_gen2_filesystem" "dtnahisdata" {
+   name               = "dtnahisdatalake"
+   storage_account_id = azurerm_storage_account.sgacc.id
 
 #   properties = {
 #     hello = "siva12345"
