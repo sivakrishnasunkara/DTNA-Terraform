@@ -21,10 +21,10 @@ resource "azurerm_resource_group" "RG1" {
    address_prefix = var.subnetoneaddr
 }
 
-   subnet {
-     name           = var.subnettwo
-     address_prefix = var.subnettwoaddr
-   }
+#    subnet {
+#      name           = var.subnettwo
+#      address_prefix = var.subnettwoaddr
+#    }
 
 #    subnet {
 #      name           = var.subnetthree
