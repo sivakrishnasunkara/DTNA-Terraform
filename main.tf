@@ -26,11 +26,11 @@ resource "azurerm_resource_group" "RG1" {
      address_prefix = var.subnettwoaddr
    }
 
-#   subnet {
-#     name           = var.subnetthree
-#     address_prefix = var.subeneththreeaddr
-#   }
-# }
+   subnet {
+     name           = var.subnetthree
+     address_prefix = var.subeneththreeaddr
+   }
+}
 # resource "azurerm_databricks_workspace" "bricks" {
 #   name                = var.databricks
 #   resource_group_name = azurerm_resource_group.RG1.name
