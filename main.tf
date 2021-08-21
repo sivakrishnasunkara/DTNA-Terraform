@@ -58,7 +58,7 @@ resource "azurerm_resource_group" "RG1" {
 #   properties = {
 #     hello = "siva12345"
 #   }
-# }
+ }
 # resource "azurerm_eventhub_namespace" "ehname" {
 #   name                = "dtnanamespace"
 #   location            = azurerm_resource_group.RG1.location
