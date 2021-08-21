@@ -11,15 +11,15 @@ resource "azurerm_resource_group" "RG1" {
   name     = var.resourceGroup
   location = var.rglocation
 }
-# resource "azurerm_virtual_network" "dtnanetwork" {
-#   name                = var.network
-#   resource_group_name = "${azurerm_resource_group.RG1.name}"
-#   location            = "${azurerm_resource_group.RG1.location}"
-#   address_space       = var.addrspace
-#   subnet {
-#     name           = var.subnetone
-#     address_prefix = var.subnetoneaddr
-#   }
+ resource "azurerm_virtual_network" "dtnanetwork" {
+   name                = var.network
+   resource_group_name = "${azurerm_resource_group.RG1.name}"
+   location            = "${azurerm_resource_group.RG1.location}"
+   address_space       = var.addrspace
+   subnet {
+   name           = var.subnetone
+   address_prefix = var.subnetoneaddr
+}
 
 #   subnet {
 #     name           = var.subnettwo
