@@ -55,7 +55,7 @@ resource "azurerm_resource_group" "RG1" {
 #    name               = "dtnahisdatalake"
 #    storage_account_id = azurerm_storage_account.sgacc.id
 
-#   properties = {
+#   properties =  {
 #     hello = "siva12345"
 #   }
 # }
