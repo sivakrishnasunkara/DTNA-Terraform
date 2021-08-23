@@ -130,5 +130,5 @@ resource "azurerm_resource_group" "RG1" {
 #   name                = "dtnafactory"
 #   location            = azurerm_resource_group.RG1.location
 #   resource_group_name = azurerm_resource_group.RG1.name
-#  }
+# }
 
