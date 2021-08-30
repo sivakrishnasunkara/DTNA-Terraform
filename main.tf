@@ -40,15 +40,15 @@ resource "azurerm_databricks_workspace" "bricks" {
     Environment = "var.databrickstag"
   }
 }
-resource "azurerm_storage_account" "sgacc" {
-  name                     = var.dtnadatalake
-  resource_group_name      = azurerm_resource_group.RG1.name
-  location                 = azurerm_resource_group.RG1.location
-  account_tier             = var.datalakeaccounttier
-  account_replication_type = var.datalakereplication
-  account_kind             = var.datalakeaccountkind
-  is_hns_enabled           = var.storagehns
-}
+# resource "azurerm_storage_account" "sgacc" {
+#   name                     = var.dtnadatalake
+#   resource_group_name      = azurerm_resource_group.RG1.name
+#   location                 = azurerm_resource_group.RG1.location
+#   account_tier             = var.datalakeaccounttier
+#   account_replication_type = var.datalakereplication
+#   account_kind             = var.datalakeaccountkind
+#   is_hns_enabled           = var.storagehns
+# }
 
 # resource "azurerm_storage_data_lake_gen2_filesystem" "dtnahisdata" {
 #   name               = "dtnahisdatalake"
