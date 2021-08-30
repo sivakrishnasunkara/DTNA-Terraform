@@ -109,7 +109,7 @@ resource "azurerm_storage_account" "sgacc" {
 #   cluster_name        = azurerm_kusto_cluster.cluster.name
 #   hot_cache_period    = var.adxdatabasecacheperiod
 #   soft_delete_period  = var.adxdatabasedelperiod
-# }
+#  }
 # resource "azurerm_kusto_eventhub_data_connection" "eventhub_connection" {
 #   name                = "my-kusto-eventhub-data-connection"
 #   resource_group_name = azurerm_resource_group.RG1.name
