@@ -50,14 +50,14 @@ resource "azurerm_storage_account" "sgacc" {
   is_hns_enabled           = var.storagehns
 }
 
-resource "azurerm_storage_data_lake_gen2_filesystem" "dtnahisdata" {
-  name               = "dtnahisdatalake"
-  storage_account_id = azurerm_storage_account.sgacc.id
+# resource "azurerm_storage_data_lake_gen2_filesystem" "dtnahisdata" {
+#   name               = "dtnahisdatalake"
+#   storage_account_id = azurerm_storage_account.sgacc.id
 
-  properties = {
-    hello = "siva12345"
-  }
-}
+#   properties = {
+#     hello = "siva12345"
+#   }
+# }
 # resource "azurerm_eventhub_namespace" "ehname" {
 #   name                = "dtnanamespace"
 #   location            = azurerm_resource_group.RG1.location
@@ -92,24 +92,24 @@ resource "azurerm_storage_data_lake_gen2_filesystem" "dtnahisdata" {
 #   resource_group_name = azurerm_resource_group.RG1.name
 #   user_metadata       = "some-meta-data"
 # }
-resource "azurerm_kusto_cluster" "cluster" {
-  name                = var.dtnaadxcluster
-  location            = azurerm_resource_group.RG1.location
-  resource_group_name = azurerm_resource_group.RG1.name
+# resource "azurerm_kusto_cluster" "cluster" {
+#   name                = var.dtnaadxcluster
+#   location            = azurerm_resource_group.RG1.location
+#   resource_group_name = azurerm_resource_group.RG1.name
 
-  sku {
-    name     = var.adxclustercompute
-    capacity = var.adxclustercapacity
-  }
-}
-resource "azurerm_kusto_database" "database" {
-  name                = var.dtnaadxdatabase
-  resource_group_name = azurerm_resource_group.RG1.name
-  location            = azurerm_resource_group.RG1.location
-  cluster_name        = azurerm_kusto_cluster.cluster.name
-  hot_cache_period    = var.adxdatabasecacheperiod
-  soft_delete_period  = var.adxdatabasedelperiod
-}
+#   sku {
+#     name     = var.adxclustercompute
+#     capacity = var.adxclustercapacity
+#   }
+# }
+# resource "azurerm_kusto_database" "database" {
+#   name                = var.dtnaadxdatabase
+#   resource_group_name = azurerm_resource_group.RG1.name
+#   location            = azurerm_resource_group.RG1.location
+#   cluster_name        = azurerm_kusto_cluster.cluster.name
+#   hot_cache_period    = var.adxdatabasecacheperiod
+#   soft_delete_period  = var.adxdatabasedelperiod
+# }
 # resource "azurerm_kusto_eventhub_data_connection" "eventhub_connection" {
 #   name                = "my-kusto-eventhub-data-connection"
 #   resource_group_name = azurerm_resource_group.RG1.name
